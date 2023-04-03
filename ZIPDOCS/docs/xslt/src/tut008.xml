@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Adjust the Y- and Y2-axis ranges-->
+<!--<chart xmlns="http://fleabag.org/lineChart"-->
+<chart
+       debug="false"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://fleabag.org/lineChart file:lineChart.xsd">
+
+    <title>Weather Balloon Tracking</title>
+
+    <series>
+        <title>Aquarius</title>
+        <datum y="1"/>
+        <datum y="3"/>
+        <datum y="9"/>
+        <datum y="8"/>
+        <datum y="7"/>
+    </series>
+
+    <series>
+        <title>Scorpio</title>
+        <datum y2="11"/>
+        <datum y2="117"/>
+        <datum y2="87"/>
+        <datum y2="63"/>
+        <datum y2="2"/>
+    </series>
+
+    <layout>
+        <south>
+            <legend/>
+        </south>
+    </layout>
+
+    <axis>
+        <y>
+            <range>
+                <min>0</min>
+                <max>15</max>
+            </range>
+        </y>
+        <y2>
+            <range>
+                <min>0</min>
+                <max>150</max>
+            </range>
+        </y2>
+    </axis>
+
+</chart>

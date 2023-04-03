@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+  <body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+  <h1>How to publish SVG using Apache</h1>
+
+  <ul>
+    <li>You may need to configure your web server to associate svg (and svgz)
+      files with the &quot;image/svg+xml&quot; MIME type. This lets the web
+      server tell the web browser that the file being sent to it should be
+      rendered by something that understands the SVG format (for example, the
+      Adobe SVG plugin). Either update your httpd.conf file or add the following to .htaccess in
+      the directory in which you want to put your SVG files:<br>
+      <br>
+      <code>
+AddType image/svg+xml svg<br>
+AddType image/svg+xml svgz<br>
+AddEncoding gzip svgz<br>
+  </code>
+    </li>
+  <li>
+  Publish your SVG files into a directory on your web server. If you like, you
+  can compress the svg file using <a href="http://www.gzip.org/">gzip</a> to
+  produce an svgz file and publish the (much smaller) svgz file instead. This
+  will reduce transmission times if that is a problem for you.<br>
+  <li>
+  Insert the following tag in an HTML page whenever you want to display an SVG
+  file:<br>
+  <br>
+  <code>&lt;object data=&quot;your.svg&quot; width=&quot;400&quot;
+  height=&quot;300&quot; type=&quot;image/svg+xml&quot;&gt;&lt;/object&gt;<br>
+  <br>
+  </code>Don't be tempted to use the (otherwise perfectly correct) empty element
+  syntax:<br>
+  <br>
+  <code>&lt;object ... type=&quot;image/svg+xml&quot;/&gt;<br>
+  <br>
+  </code>...because Internet Explorer (version 6 and maybe other versions) gets
+  confused and stops rendering any HTML after it.
+  </ul>
+  &nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></body>
+</html>

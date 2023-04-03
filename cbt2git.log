@@ -1,0 +1,36 @@
+2023-04-03 02:06:08.435544 - Initialized conversion of CBT706
+2023-04-03 02:06:09.851366 - Received CBT.V504.FILE706.PDS from FILE706.XMI 
+2023-04-03 02:06:09.853893 - Found $$$#DATE.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$$$#DATE
+2023-04-03 02:06:09.855256 - Found $$$INDEX.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$$$INDEX
+2023-04-03 02:06:09.856258 - Found $$NOTE1.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$$NOTE1
+2023-04-03 02:06:09.857266 - Found $$NOTE2.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$$NOTE2
+2023-04-03 02:06:09.858372 - Found $$README.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$$README
+2023-04-03 02:06:09.859390 - Found $01INST.jcl (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$01INST
+2023-04-03 02:06:09.860386 - Found $02TOSVG.jcl (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$02TOSVG
+2023-04-03 02:06:09.861510 - Found $03TOPNG.jcl (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$03TOPNG
+2023-04-03 02:06:09.862584 - Found $04TOJPG.jcl (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$04TOJPG
+2023-04-03 02:06:09.863619 - Found $05TOTIF.jcl (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/$05TOTIF
+2023-04-03 02:06:09.864765 - Found @FILE706.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/@FILE706
+2023-04-03 02:06:09.864776 - Found JARBATIK.zip (application/zip), trying to unzip
+2023-04-03 02:06:09.876472 - Found JARBATIK.zip (application/zip), extracting to CBT706/JARBATIK
+2023-04-03 02:06:10.087938 - Found JARRAST.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.088868 - Found JARRAST.zip (application/zip), extracting to CBT706/JARRAST
+2023-04-03 02:06:10.092639 - Found JARXALAN.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.099008 - Found JARXALAN.zip (application/zip), extracting to CBT706/JARXALAN
+2023-04-03 02:06:10.251070 - Found JARXERCE.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.254682 - Found JARXERCE.zip (application/zip), extracting to CBT706/JARXERCE
+2023-04-03 02:06:10.324639 - Found JARXMLAP.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.325740 - Found JARXMLAP.zip (application/zip), extracting to CBT706/JARXMLAP
+2023-04-03 02:06:10.343597 - Found LICENSE.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/LICENSE
+2023-04-03 02:06:10.344639 - Found NOTICE.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/NOTICE
+2023-04-03 02:06:10.345889 - Found TOJPEG.x-shellscript (text/x-shellscript) in CBT.V504.FILE706.PDS, moved to PDS/TOJPEG
+2023-04-03 02:06:10.347020 - Found TOPNG.x-shellscript (text/x-shellscript) in CBT.V504.FILE706.PDS, moved to PDS/TOPNG
+2023-04-03 02:06:10.348063 - Found TOSVG.x-shellscript (text/x-shellscript) in CBT.V504.FILE706.PDS, moved to PDS/TOSVG
+2023-04-03 02:06:10.349185 - Found TOTIFF.x-shellscript (text/x-shellscript) in CBT.V504.FILE706.PDS, moved to PDS/TOTIFF
+2023-04-03 02:06:10.350158 - Found XML.xml (text/xml) in CBT.V504.FILE706.PDS, moved to PDS/XML
+2023-04-03 02:06:10.351253 - Found XSD.txt (text/plain) in CBT.V504.FILE706.PDS, moved to PDS/XSD
+2023-04-03 02:06:10.352360 - Found XSL.xml (text/xml) in CBT.V504.FILE706.PDS, moved to PDS/XSL
+2023-04-03 02:06:10.352371 - Found ZIPDOCS.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.353241 - Found ZIPDOCS.zip (application/zip), extracting to CBT706/ZIPDOCS
+2023-04-03 02:06:10.378587 - Found ZIPFILE.zip (application/zip), trying to unzip
+2023-04-03 02:06:10.379330 - Found ZIPFILE.zip (application/zip), extracting to CBT706/ZIPFILE

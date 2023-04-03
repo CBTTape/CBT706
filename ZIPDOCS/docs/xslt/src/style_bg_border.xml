@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    <chart xmlns="http://fleabag.org/lineChart"-->
+<chart
+    debug="false"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://fleabag.org/lineChart file:lineChart.xsd">
+
+    <style>
+        <plotarea>
+            <border>stroke-width:15;stroke:mediumorchid</border>
+        </plotarea>
+    </style>
+</chart>

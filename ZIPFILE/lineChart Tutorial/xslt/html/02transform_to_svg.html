@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+  <body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+  <h1>How to transform XML data into SVG</h1>
+
+  <ul>
+    <li>If you want to transform the XML file into SVG on a PC then make sure you have downloaded and
+      installed <a href="http://java.sun.com/webapps/getjava/BrowserRedirect?locale=en&host=www.java.com:80">Sun's Java Runtime Environment
+      </a>
+    <li>If you want to transform the XML file into SVG on an IBM z/Series
+      mainframe, then make sure you have downloaded and installed
+ <a href="http://www-1.ibm.com/servers/eserver/zseries/software/java/getsdk14.html">IBM's
+ Java Development Kit 1.4 for z/Series
+      </a>
+    <li>Download the Apache Project's <a href="http://xml.apache.org/xalan-j/downloads.html">XALAN XSLT processor
+      </a></li>
+    <li>Put your chart data into a <a href="syntax.html">simple XML file format</a>. Because
+    the XML input file is plain text, it can be created by any program.
+    </li>
+    <li>Run the following command to transform the XML input file (your.xml) into <a href="http://www.w3.org/TR/SVG"> SVG</a> 
+      format (your.svg) using the stylesheet called lineChart.xsl:
+      <pre>java org.apache.xalan.xslt.Process -in your.xml -xsl lineChart.xsl -out your.svg -param protocol http:</pre>
+      <p><b>Note:</b> The &quot;-param protocol http:&quot; is a hack to make
+      the Adobe SVG Viewer plugin handle relative URLs properly. You only need
+      this if you are using the Adobe SVG Viewer 3.01 plugin and are going to
+      serve the SVG out from a web server.</p>
+  </ul>
+
+  &nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></body>
+</html>

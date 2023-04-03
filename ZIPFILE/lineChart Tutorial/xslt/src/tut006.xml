@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<chart xmlns="http://fleabag.org/lineChart"-->
+<chart
+       debug="false"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://fleabag.org/lineChart file:lineChart.xsd">
+
+    <title>Weather Balloon Tracking</title>
+
+    <series>
+        <title>Aquarius</title>
+        <datum y="1"/>
+        <datum y="3"/>
+        <datum y="9"/>
+        <datum y="8"/>
+        <datum y="7"/>
+    </series>
+
+    <series>
+        <title>Scorpio</title>
+        <datum y="11"/>
+        <datum y="117"/>
+        <datum y="87"/>
+        <datum y="63"/>
+        <datum y="2"/>
+    </series>
+
+    <layout>
+        <south>
+            <legend/>
+        </south>
+    </layout>
+
+</chart>

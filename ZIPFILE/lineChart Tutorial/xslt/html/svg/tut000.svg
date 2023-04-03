@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" height="600" width="800" viewBox="0 0 800 600">
+<style type="text/css">
+<![CDATA[
+        .grid           {fill:none;stroke-width:2;stroke:#fafafa;;}
+        .gridVert       {;}
+        .gridVertMajor  {;}
+        .gridVertMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .gridHorz       {;}
+        .gridHorzMajor  {;}
+        .gridHorzMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .ref            {stroke:blue;stroke-width:1;stroke-dasharray:1,2;;}
+        .refVert        {;}
+        .refHorz        {;}
+        .label          {stroke:none;fill:black;font-size:10px;;}
+        .labelX         {font-size:10px;;text-anchor:middle;}
+        .labelY         {font-size:10px;;text-anchor:end;}
+        .labelX2        {font-size:10px;;text-anchor:middle;}
+        .labelY2        {font-size:10px;;text-anchor:start;}
+        .title          {fill:gold;stroke:goldenrod;font-size:40px;;text-anchor:middle;}
+        .titleX         {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleX2        {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleY         {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleY2        {fill:black;font-size:20px;;text-anchor:middle;}
+        .plotarea       {fill:white;}
+        .plotareaBorder {fill:none;stroke:gray;stroke-width:3;;}
+        .legend         {stroke:none;fill:black;font-size:10px;;}
+        .annotation     {fill:gold;stroke:black;fill-opacity:0.2;stroke-opacity:0.2;font-size:10px;;}
+        .annotationText {fill:black;fill-opacity:0.7;stroke:none;;text-anchor:middle;}
+        .series         {fill:none;stroke-width:5;stroke-opacity:0.5;stroke-linejoin:round;stroke-linecap:round;;}
+    ]]>
+</style>
+<defs>
+<filter width="100" height="100" id="shadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+<filter width="100" height="100" id="invertedShadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="-4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+</defs>
+<g transform="matrix(1 0 0 -1 80 555)">
+<g class="label">
+<g transform="matrix(1 0 0 -1 0 -10)" class="labelX">
+<!--X-axis Labels-->
+<text x="-0" y="0">0.00</text>
+</g>
+</g>
+<g filter="url(#shadowFilter)" transform="matrix(1 0 0 -1 -80 505)" class="title">
+<!--Chart Title-->
+<text x="400" y="0"/>
+</g>
+<clipPath id="clipPlotarea">
+<rect x="0" y="0" width="635" height="470"/>
+</clipPath>
+<g clip-path="url(#clipPlotarea)">
+<g transform="matrix(1 0 0 -1 0 470)" class="plotarea">
+<!--Plot area background-->
+<rect x="0" y="0" width="635" height="470"/>
+</g>
+<g class="grid">
+<!--Grid Lines-->
+<g class="gridVert">
+<g class="gridVertMajor">
+<!--Major Vertical Grid Lines-->
+<line x1="-0" y1="0" x2="-0" y2="470"/>
+</g>
+</g>
+</g>
+<g filter="url(#invertedShadowFilter)" class="series">
+<!--Data series-->
+</g>
+<g transform="matrix(1 0 0 -1 0 470)" class="plotareaBorder">
+<!--Plot area border-->
+<rect x="0" y="0" width="635" height="470"/>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 0 0)" class="annotation">
+<!--Annotations-->
+</g>
+</g>
+</svg>

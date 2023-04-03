@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+	<META NAME="CREATED" CONTENT="20041022;20590544">
+	<META NAME="CHANGED" CONTENT="20041022;21042612">
+            <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<H1>&lt;axis&gt;</H1>
+<h2>Syntax</h2>
+<p>
+<code>&lt;axis&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;x&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<A HREF="syntax_axis_label.html">label</A>&gt;Jan&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Feb&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Mar&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Apr&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;May&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Jun&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Jul&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Aug&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Sep&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Oct&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Nov&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;Dec&lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/x&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;y&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Y-axis
+Title&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;range&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;min&gt;0&lt;/min&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/range&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;gridline&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;major&gt;true&lt;/major&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;minor&gt;true&lt;/minor&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/gridline&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;reference at=&quot;55&quot;
+style=&quot;stroke:green;stroke-opacity:0.2;stroke-width:5;stroke-dasharray:none;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is a
+horizontal reference line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/reference&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;reference at=&quot;36&quot;
+style=&quot;stroke:red;stroke-dasharray:10,5,2,5;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is
+another horizontal reference line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/reference&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/y&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;x2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp; &lt;/x2&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;y2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<br>
+&nbsp;&nbsp;&nbsp; &lt;/y2&gt;<br>
+&lt;/axis&gt;<br>
+  </code>
+</P>
+<h2>Synopsis</h2>
+<P>
+The <code> &lt;axis&gt;</code> tag describes the axes of the chart.
+</P>
+<P>Under the <code> &lt;axis&gt;</code> tag you can insert:</P>
+<ul>
+  <li>an <code>&lt;x&gt;</code> tag describing the X-axis.</li>
+  <li>a <code>&lt;y&gt;</code> tag describing the Y-axis.</li>
+  <li>an <code>&lt;x2&gt;</code> tag describing the secondary X-axis.</li>
+  <li>a <code>&lt;y2&gt;</code> tag describing the secondary Y-axis.</li>
+</ul>
+Under each of the <code>&lt;x&gt;</code>, <code>&lt;y&gt;</code>, <code>&lt;x2&gt;</code>
+and <code>&lt;y2&gt;</code> tags you can insert:
+<ul>
+  <li>a <code>&lt;title&gt;</code> tag specifying the axis title</li>
+  <li>a <code>&lt;range&gt;</code> tag specifying the axis range (minimum and
+    maximum value plotted)</li>
+  <li>a <code>&lt;gridline&gt;</code> tag specifying the whether you want major
+    and/or minor gridlines drawn on this axis.</li>
+  <li>any number of <code>&lt;reference&gt;</code> tags specifying that a
+    reference line is to be drawn at a particular place on this axis.</li>
+  <li>a <code>&lt;label&gt;</code> tag to specify the text (rather than a
+    numeric value) to appear at major gridline intervals on this axis.</li>
+</ul>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></BODY>
+</HTML>

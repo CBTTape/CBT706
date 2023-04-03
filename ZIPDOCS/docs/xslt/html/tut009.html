@@ -1,0 +1,104 @@
+<html>
+<head>
+<link href="lineChart.css" rel="stylesheet" type="text/css">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p><a href="tut008.html"><img src="../../_derived/back_cmp_blueprnt000_back.gif" width="100" height="20" border="0" alt="Back" align="middle"></a> <a href="index.html"><img src="../../_derived/home_cmp_blueprnt000_home.gif" width="100" height="20" border="0" alt="Home" align="middle"></a> <a href="tut010.html"><img src="../../_derived/next_cmp_blueprnt000_next.gif" width="100" height="20" border="0" alt="Next" align="middle"></a>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><h1>Tutorial</h1>
+<h2>Adjust the Y-axis major grid line interval</h2>
+<p>Set the interval between y-axis major grid lines to 5. Note that the grid
+lines are always drawn based on the Y-axis interval setting rather
+than the Y2-axis interval setting - otherwise you would end up with separate grid
+lines for each axis.</p>
+<table class="sample"><tr><th>Chart xml source</th><th>Resulting image</th></tr>
+
+<tr>
+<td width="70%" rowspan="5"  >
+<pre>
+&lt;chart&gt;
+    &lt;title&gt;Weather Balloon Tracking&lt;/title&gt;
+
+    &lt;series&gt;
+        &lt;title&gt;Aquarius&lt;/title&gt;
+        &lt;datum y=&quot;1&quot;/&gt;
+        &lt;datum y=&quot;3&quot;/&gt;
+        &lt;datum y=&quot;9&quot;/&gt;
+        &lt;datum y=&quot;8&quot;/&gt;
+        &lt;datum y=&quot;7&quot;/&gt;
+    &lt;/series&gt;
+
+    &lt;series&gt;
+        &lt;title&gt;Scorpio&lt;/title&gt;
+        &lt;datum y2=&quot;11&quot;/&gt;
+        &lt;datum y2=&quot;117&quot;/&gt;
+        &lt;datum y2=&quot;87&quot;/&gt;
+        &lt;datum y2=&quot;63&quot;/&gt;
+        &lt;datum y2=&quot;2&quot;/&gt;
+    &lt;/series&gt;
+
+    &lt;layout&gt;
+        &lt;south&gt;
+            &lt;legend/&gt;
+        &lt;/south&gt;
+    &lt;/layout&gt;
+
+    &lt;axis&gt;
+        &lt;y&gt;
+            &lt;range&gt;
+                &lt;min&gt;0&lt;/min&gt;
+                &lt;max&gt;15&lt;/max&gt;
+            &lt;/range&gt;
+            <font color="red">&lt;interval&gt;
+                &lt;major&gt;5&lt;/major&gt;
+            &lt;/interval&gt;</font>
+        &lt;/y&gt;
+        &lt;y2&gt;
+            &lt;range&gt;
+                &lt;min&gt;0&lt;/min&gt;
+                &lt;max&gt;150&lt;/max&gt;
+            &lt;/range&gt;
+        &lt;/y2&gt;
+    &lt;/axis&gt;
+
+&lt;/chart&gt;
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td class="heading">SVG transcoded into a PNG image</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="images/tut009.png" alt="What the SVG image should look like" width="400" height="300"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="heading">SVG as rendered by your browser</td>
+    </tr>
+    <tr>
+      <td>
+        <object data="svg/tut009.svg" width="400" height="300" type="image/svg+xml"></object>
+        If you see no image here, then you may need to install the
+        <a href="http://www.adobe.com/support/downloads/product.jsp?product=46&platform=Windows">Adobe SVG Viewer for Windows</a>.
+      </td>
+    </tr>
+
+  </table>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p><a href="tut008.html"><img src="../../_derived/back_cmp_blueprnt000_back.gif" width="100" height="20" border="0" alt="Back" align="middle"></a> <a href="index.html"><img src="../../_derived/home_cmp_blueprnt000_home.gif" width="100" height="20" border="0" alt="Home" align="middle"></a> <a href="tut010.html"><img src="../../_derived/next_cmp_blueprnt000_next.gif" width="100" height="20" border="0" alt="Next" align="middle"></a>
+</p>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></body>
+</html>
