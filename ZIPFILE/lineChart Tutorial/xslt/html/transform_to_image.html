@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+  <body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+  <h1>How to transform an SVG file into an image file</h1>
+
+  <ul>
+    <li>If you want to transform the XML file into SVG on a PC then make sure you have downloaded and
+      installed <a href="http://java.sun.com/webapps/getjava/BrowserRedirect?locale=en&host=www.java.com:80">Sun's Java Runtime Environment<br>
+      <br>
+      </a>
+    <li>If you want to transform the XML file into SVG on an IBM z/Series
+      mainframe, then make sure you have downloaded and installed
+ <a href="http://www-1.ibm.com/servers/eserver/zseries/software/java/getsdk14.html">IBM's
+ Java Development Kit 1.4 for z/Series
+      </a>
+      <a href="http://java.sun.com/webapps/getjava/BrowserRedirect?locale=en&host=www.java.com:80"><br>
+      <br>
+      </a>
+    <li>Download the Apache Project's <a href="http://xml.apache.org/batik/">Batik SVG implementation</a>.&nbsp; <a href="http://xml.apache.org/batik/"><br>
+      <br>
+      </a></li>
+    <li>Create your SVG file as described in <a href="02transform_to_svg.html">How to Transform XML data into SVG</a>.<br>
+      <br>
+    </li>
+    <li>Run the Batik rasterizer to transform the SVG file into an image file format (either PNG, JPEG or
+      TIFF) as follows:
+  </ul>
+
+  <h2>To create your.png:</h2>
+  <pre>
+      java -Djava.awt.headless=true -jar batik-rasterizer.jar your.svg
+  </pre>
+  <h2>To create your.jpg:</h2>
+  <pre>
+      java -Djava.awt.headless=true -jar batik-rasterizer.jar -m image/jpeg -q 0.75 your.svg
+  </pre>
+  <h2>To create your.tif:</h2>
+  <pre>
+      java -Djava.awt.headless=true -jar batik-rasterizer.jar -m image/tiff your.svg
+  </pre>
+
+
+  <p>Note: The 'headless' option allows the image file to be created on machines that do not have a
+  graphics environment (for example, IBM zSeries boxes). This option was introduced with JDK1.4, so JDK1.3 and
+  earlier cannot be used.
+  </p>
+
+  <p>The Batik SVG Rasterizer options are:</p>
+  <pre>
+ -d &lt;dir|file&gt;
+ 	output directory. If there is a single input file, this can be a file.
+ -m &lt;mimeType&gt;
+ 	output mime type.
+ -w &lt;width&gt;
+ 	output width. This is a floating point value.
+ -h &lt;height&gt;
+ 	output height. This is a floating point value.
+ -maxw &lt;width&gt;
+ 	Maximum output width. This is a floating point value.
+ -maxh &lt;height&gt;
+ 	Maximum output height. This is a floating point value.
+ -a &lt;area&gt;
+ 	output area. The format for &lt;area&gt; is x,y,w,h, where x, y, w and h
+ 	are floating point values.
+ -bg &lt;color&gt;
+ 	ouput color. The format for &lt;color&gt; is a.r.g.b, where a, r, g and b
+ 	are integer values.
+ -cssMedia &lt;media&gt;
+ 	CSS media type for which the source SVG files should be
+ 	converted.
+ -cssAlternate &lt;alternate&gt;
+ 	CSS alternate stylesheet to use when converting the source
+ 	SVG files.
+ -cssUser &lt;userStylesheet&gt;
+ 	CSS user stylesheet URI to apply to converted SVG documents
+ 	in addition to any other referened or embeded stylesheets.
+ -font-family &lt;defaultFontFamily&gt;
+ 	Value used as a default when no font-family value
+ 	is specified.
+ -lang &lt;userLanguage&gt;
+ 	User language to use when converting SVG documents.
+ -q &lt;quality&gt;
+ 	Quality for the output image. This is only relevant for the
+ 	image/jpeg mime type. Range is 0.01 (maximum compression) to 0.99 (no compression).
+ -indexed (1|2|4|8)
+ 	Reduces the image to given number of bits per pixel using an
+ 	adaptive pallete, resulting in an Indexed image.  This is
+ 	currently only supported for PNG conversion.
+ -dpi &lt;resolution&gt;
+ 	Resolution for the ouptut image.
+ -validate
+ 	Controls whether the source SVG files should be validated.
+ -onload
+ 	Controls if the source SVG files must be rasterize after
+ 	dispatching the 'onload' event.
+ -scriptSecurityOff removes any security check on the scripts running
+ 	as a result of dispatching the onload event.
+ -anyScriptOrigin controls whether scripts can be loaded from
+ 	 any location. By default, scripts can only be loaded from
+ 	the same location as the document referencing them.
+ -scripts &lt;listOfAllowedScripts&gt; List of script types (i.e.,
+ 	values for the type attribute in the &lt;script&gt; tag) which
+ 	should be loaded.
+  </pre>
+  <!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></body>
+</html>

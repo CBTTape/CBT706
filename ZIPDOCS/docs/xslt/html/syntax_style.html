@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+	<META NAME="CREATED" CONTENT="20041022;20590544">
+	<META NAME="CHANGED" CONTENT="20041022;21042612">
+            <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<H1>&lt;style&gt;</H1>
+<h2>Syntax</h2>
+<p>
+<code>&lt;<A HREF="syntax_style.html">style</A>&gt;<br>
+&nbsp;&nbsp;&nbsp; font-family:Arial &lt;!-- Default font for entire chart
+--&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filter:none; &lt;!-- ...removes the
+default drop shadow --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:lime;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke:blue;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;x2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:red;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/x2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;y2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:red;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/y2&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;grid&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vertical&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;major&gt;stroke:white;&lt;/major&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;minor&gt;stroke:pink;&lt;/minor&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vertical&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;horizontal&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;major&gt;stroke:white;&lt;/major&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;minor&gt;stroke:pink;&lt;/minor&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/horizontal&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/grid&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;reference&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vertical&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;major&gt;stroke:red&lt;/major&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vertical&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;horizontal&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;major&gt;stroke:yellow&lt;/major&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/horizontal&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/reference&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;x2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:red<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/x2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;y2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:red<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/y2&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;plotarea&gt;<br>
+&lt;!--&nbsp;&nbsp;&nbsp; &lt;color 
+opacity=&quot;0.2&quot;&gt;seagreen&lt;/color&gt; --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;gradient&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;0.00&quot; opacity=&quot;0.80&quot;&gt;blue&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;0.50&quot; opacity=&quot;0.50&quot;&gt;skyblue&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;0.70&quot; opacity=&quot;0.50&quot;&gt;lightblue&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;0.75&quot; opacity=&quot;0.50&quot;&gt;orange&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;0.80&quot; opacity=&quot;0.75&quot;&gt;yellow&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;color
+offset=&quot;1.00&quot;&gt;green&lt;/color&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/gradient&gt;<br>
+&lt;!--&nbsp;&nbsp;&nbsp; &lt;picture&gt;background.jpg&lt;/picture&gt; --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;picture location=&quot;topright&quot;
+&gt;penguin.png&lt;/picture&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;picture
+location=&quot;bottom&quot; &gt;penguin.png&lt;/picture&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;border/&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/plotarea&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;annotation&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;marker&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:blue;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+stroke-width:2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+stroke:mediumturquoise;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+stroke-opacity:0.75;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/marker&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;text&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fill:yellow;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fill-opacity:1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+font-size:24px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-weight:bold;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-family:Technical;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/text&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/annotation&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;series&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;hue&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;initial&gt;270&lt;/initial&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;step&gt;10&lt;/step&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/hue&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;saturation&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;min&gt;0.4&lt;/min&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;max&gt;1.0&lt;/max&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;levels&gt;4&lt;/levels&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/saturation&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;brightness&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;min&gt;0.5&lt;/min&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;max&gt;1&lt;/max&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;levels&gt;2&lt;/levels&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/brightness&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/series&gt;<br>
+&lt;/style&gt;<br>
+</code>
+</P>
+<h2>Synopsis</h2>
+<P>
+The <code> &lt;style&gt;</code> tag describes what you want the chart to look
+like. Rather than specify this information with the data, the data and the style
+are kept separate (pretty much). This way, you only have to supply your data to
+be charted and a default style will be applied. Most style information is
+specified using <a href="http://www.w3.org/TR/SVG/styling.html">CSS2 syntax</a>.
+The exception is the generation of colors for each data series which just uses
+numbers as explained below.
+</P>
+<P>Under the <code> &lt;style&gt;</code> tag you can insert:</P>
+<ul>
+  <li><a href="http://www.w3.org/TR/SVG/styling.html">CSS styles</a> that apply
+    to the text for the entire chart. A useful thing to specify here is the
+    default font to use for the chart. For example,&nbsp; <code>font-family:Arial</code>.
+    Anything you specify here can be overridden by the following tags.</li>
+  <li>a <code>&lt;title&gt;</code>  tag to specify the appearance of the chart
+    and axis titles</li>
+  <li>a <code>&lt;grid&gt;</code>  tag to specify the appearance of any grid
+    lines</li>
+  <li>a <code>&lt;reference&gt;</code>  to specify the default appearance of any
+    reference lines. You can override the default on individual reference lines</li>
+  <li>a <code>&lt;label&gt;</code>  tag to specify the appearance of the axis
+    labels</li>
+  <li>a <code>&lt;plotarea&gt;</code>  tag to specify the appearance of the plot
+    area</li>
+  <li>a <code>&lt;annotation&gt;</code>  tag to specify the appearance of any
+    annotations</li>
+  <li>a <code>&lt;series&gt;</code>  tag&nbsp; to specify how you want the
+    colors of each series to be generated.&nbsp; You can override the generated
+    style on individual series.</li>
+</ul>
+Under the <code>&lt;plotarea&gt;</code> tag you can insert (any number of):
+<ul>
+  <li>a <code>&lt;color&gt;</code> tag specifying a color to to use as the
+    plotarea background. Colors can be specified as defined by the <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords">color
+    section of the SVG specification</a> (that is, as either pre-defined names
+    or as rgb(r,g,b) triplets). Having said all that, specifying <code>&lt;color&gt;white&lt;/color&gt;</code>
+    is pretty typical. The default color is transparent, which looks as though
+    you have drawn the chart on glass. An example follows:<br>
+    <table border="0">
+      <tr>
+        <td width="150" valign="top"><img border="0" src="images/style_bg_color.png" width="150" height="100"></td>
+        <td valign="top">
+          <p style="margin-top: 12"><code>&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color&gt;lightyellow&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp; &lt;/style&gt;</code></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</li>
+  <li>a <code>&lt;gradient&gt;</code> tag&nbsp; specifying a gradient to use as
+    the plotarea background. A gradient is a gradual change from one color to
+    another. In addition to color, you can also specify opacity (the reverse of
+    transparency)&nbsp; so a gradient can
+    become progressively more or less transparent. Also, the number of gradient
+    changes is unlimited. For example:<br>
+    <table border="0">
+      <tr>
+        <td width="150" valign="top"><img border="0" src="images/style_bg_gradient.png" width="150" height="100"></td>
+        <td valign="top">
+          <p style="margin-top: 12"><code>&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;gradient&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color offset=&quot;0%&quot;&gt;skyblue&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color offset=&quot;80%&quot;&gt;azure&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color offset=&quot;81%&quot;&gt;sienna&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color offset=&quot;82%&quot;&gt;wheat&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;color offset=&quot;100%&quot;&gt;olive&lt;/color&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;/gradient&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp; &lt;/style&gt;</code></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</li>
+  <li>a <code>&lt;picture&gt;</code> tag specifying an image to be drawn either
+    on the background or as the background. By specifying the <code>location</code>
+    attribute on the tag, the image can be either stretched to fit the plotarea
+    (<code>location=&quot;stretch&quot;</code>), tiled over the plotarea (<code>location=&quot;tile&quot;</code>)
+    or positioned in a particular part of the plotarea (<code>location=&quot;center&quot;,
+    &quot;top&quot;</code>,
+    <code>&quot;topright&quot;</code>, <code>&quot;right&quot;</code> ... etc...
+    you get the picture!). By default the image you specify will be scaled to
+    fit within major grid lines. This is usually ok, but you can always specify
+    the <code>width</code> and <code>height</code> attributes to make it the
+    size you want. For example:<br>
+    <table border="0">
+      <tr>
+        <td width="150" valign="top"><img border="0" src="images/style_bg_picture.png" width="150" height="100"></td>
+        <td valign="top">
+          <p style="margin-top: 12"><code>&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;picture&gt;background.jpg&lt;/picture&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp; &lt;/style&gt;</code></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</li>
+  <li>a <code>&lt;border&gt;</code> tag specifying the style to be applied to
+    the border around the plotarea. For example:<br>
+    <table border="0">
+      <tr>
+        <td width="150" valign="top"><img border="0" src="images/style_bg_border.png" width="150" height="100"></td>
+        <td valign="top">
+          <p style="margin-top: 12"><code>&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;border&gt;stroke-width:15;stroke:mediumorchid&lt;/border&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/plotarea&gt;<br>
+          &nbsp;&nbsp;&nbsp; &lt;/style&gt;</code></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</li>
+</ul>
+<p>The colors, gradients and pictures you specify under the <code>&lt;plotarea&gt;</code> tag are
+drawn in order of appearance. This could have unexpected consequences. For
+example, specifying <code>&lt;color&gt;</code> after <code>&lt;picture&gt;</code>
+will cause the picture to be obliterated by the color. So, generally, you should
+specify <code>&lt;picture&gt;</code> tags last.</p>
+<p>The border is always drawn on top and is clipped to the plotarea size. This
+is done to keep the ends of each series line neatly clipped to the plot area.
+Consequently, if you specify a <code>fill:<i>color</i></code> style in the <code>&lt;border&gt;</code>
+tag you will obliterate the entire chart. You probably don't want to do that.</p>
+Using the <code>&lt;series&gt;</code> tag you can control how colors are
+generated to plot each data series. Basically, you specify the starting hue,
+saturation and brightness values and the color generation algorithm will try to
+generate colors that are not too visually close together.&nbsp; That is, the
+first color may be intense red and the second may be a subdued green. The idea
+is that if the chart is ever printed in black and white, you should still be
+able to distinguish the different data series - the red will look like black and
+the green will look gray.&nbsp;&nbsp;
+<p>Under the <code>&lt;series&gt;</code> tag you can specify:</p>
+<ul>
+  <li>a <code>&lt;hue&gt;</code> tag to specify the initial hue and stepping
+    value.&nbsp; A value from 0 (red), cycling to 360 (red again!) is standard
+    HSV notation. Numbers outside this range are treated as modulus 360. You can
+    also specify a step. So <code>&lt;initial&gt;270&lt;/initial&gt;</code> and <code>&lt;step&gt;10&lt;/step&gt;</code>
+    generates hue values as follows: 270, 280, 290, ..., 350, 0, 10, 20, and so
+    on. The default is:&nbsp;<br>
+    <code><br>
+    &nbsp; &lt;hue&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;initial&gt;250&lt;/initial&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;step&gt;47&lt;/step&gt;<br>
+    &nbsp; &lt;/hue&gt;<br>
+    </code></li>
+  <li>a <code>&lt;saturation&gt;</code> tag to specify the minimum and maximum
+    saturation values (0.0 to 1.0) and the number of saturation values to cycle
+    through. The default is:&nbsp;<code><br>
+    <br>
+    &nbsp; &lt;saturation&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;min&gt;0.6&lt;/min&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;max&gt;1.0&lt;/max&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;levels&gt;5&lt;/levels&gt;<br>
+    &nbsp; &lt;/saturation&gt;<br>
+    </code></li>
+  <li>a <code>&lt;brightness&gt;</code> tag to specify the minimum and maximum
+    brightness values (0.0 to 1.0) and the number of brightness values to cycle
+    through. The default is:&nbsp;<code><br>
+    <br>
+    &nbsp; &lt;brightness&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;min&gt;0.4&lt;/min&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;max&gt;1.0&lt;/max&gt;<br>
+    &nbsp;&nbsp;&nbsp; &lt;levels&gt;5&lt;/levels&gt;<br>
+    &nbsp; &lt;/brightness&gt;<br>
+    </code></li>
+</ul>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></BODY>
+</HTML>
