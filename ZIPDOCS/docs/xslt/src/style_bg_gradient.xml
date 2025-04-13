@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    <chart xmlns="http://fleabag.org/lineChart"-->
+<chart
+    debug="false"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://fleabag.org/lineChart file:lineChart.xsd">
+
+    <layout>
+        <scale>0.5</scale>
+    </layout>
+
+    <style>
+        <plotarea>
+            <gradient>
+                <color offset="0%">skyblue</color>
+                <color offset="80%">azure</color>
+                <color offset="81%">sienna</color>
+                <color offset="82%">wheat</color>
+                <color offset="100%">olive</color>
+            </gradient>
+        </plotarea>
+    </style>
+</chart>

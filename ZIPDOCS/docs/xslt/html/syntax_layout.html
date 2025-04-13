@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+	<META NAME="CREATED" CONTENT="20041022;20590544">
+	<META NAME="CHANGED" CONTENT="20041022;21042612">
+            <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<H1>&lt;layout&gt;</H1>
+<h2>Syntax</h2>
+<p>
+<code>&lt;layout&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;width&gt;800&lt;/width&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;height&gt;600&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;margin&gt;10&lt;/margin&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;height&gt;40&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;north&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;20&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;10&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/north&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;south&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fontsize&gt;10&lt;/fontsize&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;rotation&gt;-90&lt;/rotation&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;10&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;20&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;legend&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;60&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;columns&gt;4&lt;/columns&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/legend&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/south&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;east&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;width&gt;50&lt;/width&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;width&gt;20&lt;/width&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;legend&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;columns&gt;1&lt;/columns&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/legend&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/east&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;west&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;20&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;width&gt;50&lt;/width&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;height&gt;10&lt;/height&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/label&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/west&gt;<br>
+&lt;/layout&gt;<br>
+</code>
+</P>
+<h2>Synopsis</h2>
+<P>
+The <code> &lt;layout&gt;</code> tag describes the main chart areas.&nbsp;See <a href="overview.html">Overview
+of chart layout</a> for more information.
+</P>
+<P>
+The chart is divided into the following areas:
+</P>
+<table border="1" width="63%">
+  <tr>
+    <td width="100%" colspan="3">
+      <p align="center">Chart Title</td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3" height="50">
+      <p align="center">North</td>
+  </tr>
+  <tr>
+    <td width="15%">
+      <p align="center">West</td>
+    <td width="70%" height="200">
+      <p align="center">Plotarea</td>
+    <td width="15%">
+      <p align="center">East</td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3" height="50">
+      <p align="center">South</td>
+  </tr>
+</table>
+<P>Under the <code> &lt;layout&gt;</code> tag you can insert:</P>
+<ul>
+  <li>a <code>&lt;width&gt;</code> tag specifying the width of the chart. By
+    default units are pixels, but you can specify real world units such as 200mm
+    if you like.</li>
+  <li>a <code>&lt;height&gt;</code> tag specifying the height of the chart.</li>
+  <li>a <code>&lt;margin&gt;</code> tag specifying the size of the margin
+    surrounding the entire chart (like the white margin around a photograph).
+    This is deducted from the chart width and height, not added to it.</li>
+  <li>a <code>&lt;title&gt;</code> tag specifying the title of the chart.</li>
+  <li>a <code>&lt;north&gt;</code> tag describing the North area.</li>
+  <li>an <code>&lt;east&gt;</code> tag describing the East area.</li>
+  <li>a <code>&lt;south&gt;</code> tag describing the South area.</li>
+  <li>a <code>&lt;west&gt;</code> tag describing the West areas.</li>
+</ul>
+Under each of the <code>&lt;north&gt;</code>, <code>&lt;east&gt;</code>, <code>&lt;south&gt;</code>
+and <code>&lt;west&gt;</code> tags you can insert:
+<ul>
+  <li>a <code>&lt;title&gt;</code> tag specifying space to reserve (width or
+    height) for the axis title.</li>
+  <li>a <code>&lt;label&gt;</code> tag specifying space to reserve (width or
+    height) for the axis labels. In addition, you can specify the rotation to be
+    applied to each label by specifying a <code>&lt;rotation&gt;</code> tag
+    under the <code>&lt;label&gt;</code> tag, and the height of the label text
+    (in pixels) by specifying the <code>&lt;fontsize&gt;</code> tag under the <code>&lt;label&gt;</code>
+    tag.</li>
+  <li>a <code>&lt;legend&gt;</code> tag to indicate whether you want a legend to
+    appear in this area and optionally the space to reserve for it (width or
+    height).&nbsp;
+  </li>
+  <li>any number of <code>&lt;reference&gt;</code> tags specifying that a
+    reference line is to be drawn at a particular place on this axis. This is
+    handy when you need to show minimum or maximum Y-values or perhaps a
+    milestone X-value.</li>
+  <li>any number of <code>&lt;label&gt;</code> tags to specify the text (rather than a
+    numeric value) to appear at major gridline intervals on this axis. If you
+    omit the <code>&lt;label&gt;</code> tags, then appropriate numeric labels
+    will be generated.&nbsp;</li>
+</ul>
+<p>The current implementation only allows a legend
+    to appear in the east or south areas. Under the <code>&lt;legend&gt;</code>
+tag you can insert:</p>
+    <ul>
+    	<li>A <code>&lt;columns&gt;</code> tag to specify how many columns the
+          legend is to occupy. You would typically use a single column for a
+          legend in the east area, but two or more columns in the south area.
+    </ul>
+<p>&nbsp;</p>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></BODY>
+</HTML>

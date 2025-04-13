@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--       xmlns="http://fleabag.org/lineChart"-->
+<chart
+       debug="true"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://fleabag.org/lineChart file:/c:/Java/Projects/xslt/src/lineChart.xsd">
+
+    <title>Your Chart Title</title>
+
+    <series>
+        <title>Your First Data Series</title>
+        <datum y="33"/>
+        <datum y="97"/>
+        <datum y="35"/>
+        <datum y="23"/>
+        <datum/> <!-- Missing value -->
+        <datum y="81">Isolated Value</datum>
+        <datum/> <!-- Missing value -->
+        <datum y="70"/>
+        <datum y="55"/>
+    </series>
+
+    <series style="stroke:orange;stroke-width:2;stroke-dasharray:10,5;filter:none">
+        <title>Your Second Data Series</title>
+        <datum y="6"/>
+        <datum y="66"/>
+        <datum y="13"/>
+        <datum y="39"/>
+        <datum y="87"/>
+    </series>
+
+    <series> <!-- The title of this series will be generated automatically -->
+        <datum x2="0.01" y2="6"/>
+        <datum x2="0.12" y2="66"/>
+        <datum x2="0.43" y2="13"/>
+        <datum x2="0.84" y2="39"/>
+        <datum x2="0.25" y2="87"/>
+    </series>
+
+    <axis>
+        <x>
+            <title>
+                X-Axis Title
+            </title>
+            <gridline>
+                <major>true</major>
+                <minor>false</minor>
+            </gridline>
+            <reference at="1.25" style="stroke:yellow">
+                This is a vertical reference line
+            </reference>
+            <reference at="2.75" style="stroke:yellow">
+                This is another vertical reference line
+            </reference>
+            <label>Jan</label>
+            <label>Feb</label>
+            <label>Mar</label>
+            <label>Apr</label>
+            <label>May</label>
+            <label>Jun</label>
+            <label>Jul</label>
+            <label>Aug</label>
+            <label>Sep</label>
+            <label>Oct</label>
+            <label>Nov</label>
+            <label>Dec</label>
+       </x>
+
+        <y>
+            <title>Y-axis Title</title>
+            <range>
+                <min>0</min>
+            </range>
+            <gridline>
+                <major>true</major>
+                <minor>true</minor>
+            </gridline>
+            <reference at="55" style="stroke:green;stroke-opacity:0.2;stroke-width:5;stroke-dasharray:none;">
+                This is a horizontal reference line
+            </reference>
+            <reference at="36" style="stroke:red;stroke-dasharray:10,5,2,5;">
+                This is another horizontal reference line
+            </reference>
+        </y>
+
+        <x2>
+            <title>X2-axis Title</title>
+        </x2>
+
+        <y2>
+            <title>Y2-axis Title</title>
+            <range>
+                <min>0</min>
+                <max>70</max>
+            </range>
+            <interval>
+                <major>10</major>
+                <minor>5</minor>
+            </interval>
+        </y2>
+    </axis>
+
+    <layout>
+        <width>800</width>
+        <height>600</height>
+        <margin>10</margin>
+        <title>
+            <height>40</height>
+        </title>
+        <north>
+            <title>
+                <height>20</height>
+            </title>
+            <label>
+                <height>10</height>
+            </label>
+        </north>
+        <south>
+            <label>
+                <height>10</height>
+            </label>
+            <title>
+                <height>20</height>
+            </title>
+            <legend>
+                <height>60</height>
+                <columns>4</columns>
+            </legend>
+        </south>
+        <east>
+            <label>
+                <width>50</width>
+            </label>
+            <title>
+                <width>20</width>
+            </title>
+            <legend>
+                <columns>1</columns>
+            </legend>
+        </east>
+        <west>
+            <title>
+                <height>20</height>
+            </title>
+            <label>
+                <width>50</width>
+                <height>10</height>
+            </label>
+        </west>
+    </layout>
+
+    <style>
+        <title>
+            filter:none;
+            fill:lime;
+            stroke:blue;
+            <x2>
+                fill:red;
+            </x2>
+            <y2>
+                fill:red;
+            </y2>
+        </title>
+        <grid>
+            <vertical>
+                <major>stroke:white;</major>
+                <minor>stroke:pink;</minor>
+            </vertical>
+            <horizontal>
+                <major>stroke:white;</major>
+                <minor>stroke:pink;</minor>
+            </horizontal>
+        </grid>
+        <reference>
+            <vertical>
+                <major>stroke:red</major>
+            </vertical>
+            <horizontal>
+                <major>stroke:yellow</major>
+            </horizontal>
+        </reference>
+        <label>
+            <x2>
+                fill:red
+            </x2>
+            <y2>
+                fill:red
+            </y2>
+        </label>
+        <plotarea>
+<!--            <color opacity="0.2">seagreen</color>-->
+            <gradient>
+                <color offset="0.00" opacity="0.80">blue</color>
+                <color offset="0.50" opacity="0.50">skyblue</color>
+                <color offset="0.70" opacity="0.50">lightblue</color>
+                <color offset="0.75" opacity="0.50">orange</color>
+                <color offset="0.80" opacity="0.75">yellow</color>
+                <color offset="1.00">green</color>
+            </gradient>
+<!--            <picture>background.jpg</picture>-->
+            <picture location="topright" >penguin.png</picture>
+            <picture location="bottom" >penguin.png</picture>
+            <border/>
+        </plotarea>
+        <annotation>
+            <marker>
+                fill:blue;
+                stroke-width:2;
+                stroke:mediumturquoise;
+                stroke-opacity:0.75;
+            </marker>
+            <text>
+                fill:yellow;
+                fill-opacity:1;
+                font-size:24px;
+                font-weight:bold;
+                font-family:Technical;
+            </text>
+        </annotation>
+        <series>
+            <hue>
+                <initial>270</initial>
+                <step>10</step>
+            </hue>
+            <saturation>
+                <min>0.4</min>
+                <max>1.0</max>
+                <levels>4</levels>
+            </saturation>
+            <brightness>
+                <min>0.5</min>
+                <max>1</max>
+                <levels>2</levels>
+            </brightness>
+        </series>
+    </style>
+
+</chart>

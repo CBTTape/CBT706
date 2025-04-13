@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <link href="lineChart.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Home Page</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+  <h1>How to Create Line Charts from XML Data</h1>
+
+  <p>This shows you how to create a Scalable Vector Graphics (SVG) line chart
+  from an XML input file so that a user can view it in a web browser. You can optionally convert
+  the SVG file to an image file.</p>
+
+  <h2>The Problem</h2>
+<p>You have data that you need to publish as a line chart and be viewable by users using
+  their web browser. A typical example is having to publish daily CPU usage
+figures in graphical form on your intranet.
+
+  <h2>A Solution</h2>
+  This solution involves the following steps:
+  <ol>
+  <li><a href="01extract.html">Extract</a> the data that you want to chart and use it create a text file with a <a href="syntax.html">simple XML format</a>. The XML file describes your <i>chart data</i>.
+  <li><a href="02transform_to_svg.html">Transform</a> that simple XML format into the more complex SVG format using an XSLT processor (for example
+    <a href="http://xml.apache.org/xalan-j/downloads.html">Xalan</a>) and an XSLT stylesheet
+    (<a href="../src/lineChart.xsl">supplied by this solution</a>).
+  The resulting SVG file describes the <i>chart drawing</i>.
+  <li><a href="03publish.html">Publish</a> the SVG data directly to your web server (or
+    <a href="transform_to_image.html"> convert</a> that SVG into an image file
+    first and publish the image).
+  <li><a href="04viewers.html">Browse</a> the SVG (or image) using a web browser.
+  </ol>
+
+
+<p>
+<map name="FPMap0">
+<area href="02transform_to_svg.html" shape="rect" coords="149, 122, 245, 181" title="How to transform XML to SVG">
+<area href="../src/tut016.xml" shape="rect" coords="3, 247, 98, 301" title="An example XML file">
+<area href="04viewers.html" shape="rect" coords="455, 121, 554, 182" title="How to view SVG in a web browser">
+<area href="01extract.html" shape="rect" coords="1, 123, 98, 179" title="How to extract data into an XML file">
+<area href="03publish.html" shape="rect" coords="302, 122, 398, 181" title="How to publish SVG charts on your web server">
+<area href="../src/lineChart.xsl" shape="rect" coords="151, 0, 244, 62" title="The XSL stylesheet that creates SVG">
+<area href="svg/tut016.svg" shape="rect" coords="152, 226, 242, 301" title="An example SVG file">
+<area href="http://www.w3.org/Graphics/SVG/" shape="rect" coords="131, 324, 258, 448" title="More about Scalable Vector Graphics">
+<area href="syntax.html" coords="0, 325, 103, 448" shape="rect" title="Syntax of the simple XML file">
+<area href="04viewers.html" shape="rect" coords="463, 205, 544, 304" title="How to view SVG in a web browser">
+<area href="04viewers.html" shape="rect" coords="415, 302, 575, 430" title="How to view SVG in a web browser">
+</map>
+<img border="0" src="images/overview.png" usemap="#FPMap0" width="576" height="449">
+</p>
+
+
+  <h2>More Information</h2>
+  <ul>
+    <li><a href="syntax.html">Syntax of the simple XML input file</a></li>
+    <li><a href="02transform_to_svg.html">How to transform the XML input file into an SVG file</a></li>
+    <li><a href="transform_to_image.html">How to transform an SVG file into an image file</a></li>
+    <li><a href="03publish.html">How to publish the SVG file using a web server</a></li>
+    <li><a href="04viewers.html">How to view the SVG output in a web browser</a></li>
+    <li><a href="tut000.html">Tutorial</a></li>
+    <li><a href="gpl.html">GNU Public License</a></li>
+  </ul>
+
+<p>&nbsp;</p>
+  &nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

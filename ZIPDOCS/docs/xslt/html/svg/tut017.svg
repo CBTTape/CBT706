@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" height="600" width="800" viewBox="0 0 800 600">
+<style type="text/css">
+<![CDATA[
+        .debug          {fill:none;stroke-width:0.5;stroke-opacity:1;stroke:green;}
+        .debugText      {font-family:Arial;font-weight:bold;text-anchor:middle;fill:black;stroke:none;}
+        .grid           {fill:none;stroke-width:2;stroke:#fafafa;;}
+        .gridVert       {;}
+        .gridVertMajor  {;}
+        .gridVertMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .gridHorz       {;}
+        .gridHorzMajor  {;}
+        .gridHorzMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .ref            {stroke:blue;stroke-width:1;stroke-dasharray:1,2;;}
+        .refVert        {;}
+        .refHorz        {;}
+        .label          {stroke:none;fill:black;font-size:16;;;}
+        .labelX         {text-anchor:middle;font-size:16;;;}
+        .labelY         {text-anchor:end;font-size:16;;;}
+        .labelX2        {text-anchor:middle;font-size:16;;;}
+        .labelY2        {text-anchor:start;font-size:16;;;}
+        .title          {text-anchor:middle;fill:gold;stroke:goldenrod;font-size:40;;;}
+        .titleX         {text-anchor:middle;fill:black;font-size:20;;;}
+        .titleX2        {text-anchor:middle;fill:black;font-size:20;;;}
+        .titleY         {text-anchor:middle;fill:black;font-size:20;;;}
+        .titleY2        {text-anchor:middle;fill:black;font-size:20;;;}
+        .plotarea       {fill:white;}
+        .plotareaBorder {fill:none;stroke:gray;stroke-width:3;;;}
+        .legend         {stroke:none;fill:black;font-size:12;;;;}
+        .annotation     {fill:gold;stroke:black;fill-opacity:0.2;stroke-opacity:0.2;font-size:10px;;;}
+        .annotationText {fill:black;fill-opacity:0.7;stroke:none;;;text-anchor:middle
+                        ;;}
+        .series         {fill:none;stroke-width:5;stroke-opacity:0.5;stroke-linejoin:round;stroke-linecap:round;;;}
+        .series1        {stroke:rgb(16.67%,0%,100%);}
+        .series2        {stroke:rgb(81.18%,8.5%,85%);}
+    ]]>
+</style>
+<defs>
+<filter width="100" height="100" id="shadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+<filter width="100" height="100" id="invertedShadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="-4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+</defs>
+<g transform="matrix(1 0 0 -1 85 508)">
+<!--South Legend-->
+<g transform="matrix(1 0 0 -1 0 -65)" class="series">
+<line class="series1" x1="0" y1="15" x2="31.25" y2="15"/>
+<clipPath id="clip1.0,-65">
+<rect x="0" y="0" width="151.25" height="30"/>
+</clipPath>
+<text y="18.333333333333336" x="36.25" class="legend" clip-path="url(#clip1.0,-65)">Aquarius</text>
+<line class="series2" x1="156.25" y1="15" x2="187.5" y2="15"/>
+<clipPath id="clip2.0,-65">
+<rect x="156.25" y="0" width="151.25" height="30"/>
+</clipPath>
+<text y="18.333333333333336" x="192.5" class="legend" clip-path="url(#clip2.0,-65)">Scorpio</text>
+</g>
+<g class="label">
+<g transform="matrix(1 0 0 -1 0 -28)" class="labelX">
+<!--X-axis Labels-->
+<g transform="translate(0) rotate(-90,0,-4)">
+<text>00:00</text>
+</g>
+<g transform="translate(156.25) rotate(-90,0,-4)">
+<text>01:00</text>
+</g>
+<g transform="translate(312.5) rotate(-90,0,-4)">
+<text>02:00</text>
+</g>
+<g transform="translate(468.75) rotate(-90,0,-4)">
+<text>03:00</text>
+</g>
+<g transform="translate(625) rotate(-90,0,-4)">
+<text>04:00</text>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 -5 0)" class="labelY">
+<!--Y-axis Labels-->
+<g transform="translate(-5,-0)">
+<text>0</text>
+</g>
+<g transform="translate(-5,-137.667)">
+<text>5</text>
+</g>
+<g transform="translate(-5,-275.333)">
+<text>10</text>
+</g>
+<g transform="translate(-5,-413)">
+<text>15</text>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 630 0)" class="labelY2">
+<!--Y2-axis Labels-->
+<g transform="translate(5,-0)">
+<text>0</text>
+</g>
+<g transform="translate(5,-27.533)">
+<text>10</text>
+</g>
+<g transform="translate(5,-55.067)">
+<text>20</text>
+</g>
+<g transform="translate(5,-82.6)">
+<text>30</text>
+</g>
+<g transform="translate(5,-110.133)">
+<text>40</text>
+</g>
+<g transform="translate(5,-137.667)">
+<text>50</text>
+</g>
+<g transform="translate(5,-165.2)">
+<text>60</text>
+</g>
+<g transform="translate(5,-192.733)">
+<text>70</text>
+</g>
+<g transform="translate(5,-220.267)">
+<text>80</text>
+</g>
+<g transform="translate(5,-247.8)">
+<text>90</text>
+</g>
+<g transform="translate(5,-275.333)">
+<text>100</text>
+</g>
+<g transform="translate(5,-302.867)">
+<text>110</text>
+</g>
+<g transform="translate(5,-330.4)">
+<text>120</text>
+</g>
+<g transform="translate(5,-357.933)">
+<text>130</text>
+</g>
+<g transform="translate(5,-385.467)">
+<text>140</text>
+</g>
+<g transform="translate(5,-413)">
+<text>150</text>
+</g>
+</g>
+</g>
+<g filter="url(#shadowFilter)" transform="matrix(1 0 0 -1 -85 468)" class="title">
+<!--Chart Title-->
+<text x="400" y="0">Weather Balloon Tracking</text>
+</g>
+<g transform="matrix(1 0 0 -1 0 -60)" class="titleX">
+<!--X-axis Title-->
+<text x="312.5" y="0">Time Since Launch</text>
+</g>
+<g transform="matrix(1 0 0 -1 -60 0), rotate(-90 0 -206.5)" class="titleY">
+<!--Y-axis Title-->
+<text x="0" y="-206.5">Aquarius Height Above Sea Level (km)</text>
+</g>
+<g transform="matrix(1 0 0 -1 695 0), rotate(-90 0 -206.5)" class="titleY2">
+<!--Y2-axis Title-->
+<text x="0" y="-206.5">Scorpio Height Above Sea Level (km)</text>
+</g>
+<clipPath id="clipPlotarea">
+<rect x="0" y="0" width="625" height="413"/>
+</clipPath>
+<g clip-path="url(#clipPlotarea)">
+<g transform="matrix(1 0 0 -1 0 413)" class="plotarea">
+<!--Plot area background-->
+<rect x="0" y="0" width="625" height="413"/>
+<image xlink:href="background.jpg" filter="url(#pictureFilter1)" preserveAspectRatio="none" x="0" y="0" width="156.25" height="137.66666666666669">
+<filter id="pictureFilter1" height="300%" width="400%" y="0" x="0" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
+<feOffset height="100%" width="100%" y="0" x="0"/>
+<feTile/>
+<feComponentTransfer>
+<feFuncA intercept="0" slope="0.5" type="linear"/>
+</feComponentTransfer>
+</filter>
+</image>
+</g>
+<g class="grid">
+<!--Grid Lines-->
+<g class="gridVert">
+<g class="gridVertMajor">
+<!--Major Vertical Grid Lines-->
+<line x1="0" y1="0" x2="0" y2="413"/>
+<line x1="156.25" y1="0" x2="156.25" y2="413"/>
+<line x1="312.5" y1="0" x2="312.5" y2="413"/>
+<line x1="468.75" y1="0" x2="468.75" y2="413"/>
+<line x1="625" y1="0" x2="625" y2="413"/>
+</g>
+</g>
+<g class="gridHorz">
+<g class="gridHorzMajor">
+<!--Major Horizontal Grid Lines-->
+<line x1="0" y1="0" x2="625" y2="0"/>
+<line x1="0" y1="137.67" x2="625" y2="137.67"/>
+<line x1="0" y1="275.33" x2="625" y2="275.33"/>
+<line x1="0" y1="413" x2="625" y2="413"/>
+</g>
+</g>
+</g>
+<g filter="url(#invertedShadowFilter)" class="series">
+<!--Data series-->
+<g class="series1">
+<title>Aquarius</title>
+<path d="M 0 27.53 L 156.25 82.6 L 312.5 247.8 L 468.75 220.27 L 625 192.73 "/>
+</g>
+<g class="series2">
+<title>Scorpio</title>
+<path d="M 0 30.29 L 156.25 322.14 L 312.5 239.54 L 468.75 173.46 L 625 5.51 "/>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 0 413)" class="plotareaBorder">
+<!--Plot area border-->
+<rect x="0" y="0" width="625" height="413"/>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 0 0)" class="annotation">
+<!--Annotations-->
+</g>
+</g>
+</svg>

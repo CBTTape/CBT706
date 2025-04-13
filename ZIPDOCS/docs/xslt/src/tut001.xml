@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Add a chart title-->
+ <!--<chart xmlns="http://fleabag.org/lineChart"-->
+<chart
+       debug="false"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://fleabag.org/lineChart file:lineChart.xsd">
+
+    <title>Weather Balloon Tracking</title>
+
+</chart>

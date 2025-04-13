@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+	<META NAME="CREATED" CONTENT="20041022;21134744">
+	<META NAME="CHANGED" CONTENT="20041022;22515426">
+    <link href="lineChart.css" rel="stylesheet" type="text/css">
+        <!--mstheme--><link rel="stylesheet" type="text/css" href="../../_themes/blueprnt/blue1000.css"><meta name="Microsoft Theme" content="blueprnt 1000, default">
+<meta name="Microsoft Border" content="tb, default">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>
+</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+<H1>Syntax of the simple XML Input File</H1>
+<h2 STYLE="margin-bottom: 0cm"> A Simple Example 
+</h2>
+<p>As an example of how simple it is to generate the XML file describing your
+data, the following is all that is needed to create a chart with 10 hours of CPU
+utilization data in it: 
+</p>
+<code>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;EBCDIC-CP-US&quot;?&gt;
+&lt;chart&gt;
+&nbsp;&nbsp;&nbsp; &lt;title&gt;Daily CPU Usage&lt;/title&gt;
+&nbsp;&nbsp;&nbsp; &lt;series&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;17&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;35&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;86&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;99&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;99&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;99&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;99&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;74&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;41&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;datum y=&quot;9&quot;/&gt;
+&nbsp;&nbsp;&nbsp; &lt;/series&gt;
+&lt;/chart&gt;
+</code></pre>
+<h2>
+A More Complex Example</h2>
+<P>A summary of the syntax is shown below in the form of an example
+XML input file with most options specified. If you transform this example into
+SVG the result is ghastly,
+but it illustrates where most tags go. Basically, the input file can
+contain: 
+</P>
+<ul>
+	<li><P STYLE="margin-bottom: 0cm">One or more data series (the data points for the lines you want to plot) 
+	identified by <code>&lt;series&gt;</code> elements.
+	</P>
+	<li><P STYLE="margin-bottom: 0cm">Optional axis information (range, title etc) identified by an 
+	<code>&lt;axis&gt;</code> element
+	</P>
+	<li><P STYLE="margin-bottom: 0cm">Optional layout information (size of the chart, legend position etc) 
+	identified by a <code>&lt;layout&gt;</code> element
+	</P>
+	<li><P>Optional style information (what colors and line styles to use, background images
+	etc) identified by a <code>&lt;style&gt;</code> element
+	</P>
+</ul>
+<P>All you really need to supply is your chart data.&nbsp; 
+</P>
+<P> Default axis, layout and style information will be applied if you
+don't specify any.&nbsp; Axis scale and range will be computed automatically.
+If you don't like the default chart style, you can specify your
+own by supplying a <code>&lt;style&gt;</code> tag. In addition, you can override
+the style of individual data series by specifying a <code>style</code> attribute
+on the appropriate <code>&lt;series&gt;</code> tag. 
+</P>
+<pre><code>&lt;?xml version=&quot;1.0&quot; <A HREF="syntax_encoding.html">encoding=&quot;utf-8&quot;</A>?&gt;
+&lt;<A HREF="syntax_chart.html">chart</A> debug=&quot;true&quot;&gt;
+
+    &lt;title&gt;Your Chart Title&lt;/title&gt;
+
+    &lt;<a href="syntax_series.html">series</a>&gt;
+        &lt;title&gt;Your First Data Series&lt;/title&gt;
+        &lt;<A HREF="syntax_series_datum.html">datum</A> y=&quot;33&quot;/&gt;
+        &lt;datum y=&quot;97&quot;/&gt;
+        &lt;datum y=&quot;35&quot;/&gt;
+        &lt;datum y=&quot;23&quot;/&gt;
+        &lt;datum/&gt; &lt;!-- Missing value --&gt;
+        &lt;datum y=&quot;81&quot;&gt;Isolated Value&lt;/datum&gt;
+        &lt;datum/&gt; &lt;!-- Missing value --&gt;
+        &lt;datum y=&quot;70&quot;/&gt;
+        &lt;datum y=&quot;55&quot;/&gt;
+    &lt;/series&gt;
+
+    &lt;series <A HREF="syntax_series_style.html">style</A>=&quot;stroke:orange;stroke-width:2;stroke-dasharray:10,5;filter:none&quot;&gt;
+        &lt;title&gt;Your Second Data Series&lt;/title&gt;
+        &lt;datum y=&quot;6&quot;/&gt;
+        &lt;datum y=&quot;66&quot;/&gt;
+        &lt;datum y=&quot;13&quot;/&gt;
+        &lt;datum y=&quot;39&quot;/&gt;
+        &lt;datum y=&quot;87&quot;/&gt;
+    &lt;/series&gt;
+
+    &lt;series&gt; &lt;!-- The title of this series will be generated automatically --&gt;
+        &lt;datum x2=&quot;0.01&quot; y2=&quot;6&quot;/&gt;
+        &lt;datum x2=&quot;0.12&quot; y2=&quot;66&quot;/&gt;
+        &lt;datum x2=&quot;0.43&quot; y2=&quot;13&quot;/&gt;
+        &lt;datum x2=&quot;0.84&quot; y2=&quot;39&quot;/&gt;
+        &lt;datum x2=&quot;0.25&quot; y2=&quot;87&quot;/&gt;
+    &lt;/series&gt;
+
+    &lt;<a href="syntax_axis.html">axis</a>&gt;
+        &lt;x&gt;
+            &lt;title&gt;
+                X-Axis Title
+            &lt;/title&gt;
+            &lt;gridline&gt;
+                &lt;major&gt;true&lt;/major&gt;
+                &lt;minor&gt;false&lt;/minor&gt;
+            &lt;/gridline&gt;
+            &lt;reference at=&quot;1.25&quot; style=&quot;stroke:yellow&quot;&gt;
+                This is a vertical reference line
+            &lt;/reference&gt;
+            &lt;reference at=&quot;2.75&quot; style=&quot;stroke:yellow&quot;&gt;
+                This is another vertical reference line
+            &lt;/reference&gt;
+            &lt;label&gt;Jan&lt;/label&gt;
+            &lt;label&gt;Feb&lt;/label&gt;
+            &lt;label&gt;Mar&lt;/label&gt;
+            &lt;label&gt;Apr&lt;/label&gt;
+            &lt;label&gt;May&lt;/label&gt;
+            &lt;label&gt;Jun&lt;/label&gt;
+            &lt;label&gt;Jul&lt;/label&gt;
+            &lt;label&gt;Aug&lt;/label&gt;
+            &lt;label&gt;Sep&lt;/label&gt;
+            &lt;label&gt;Oct&lt;/label&gt;
+            &lt;label&gt;Nov&lt;/label&gt;
+            &lt;label&gt;Dec&lt;/label&gt;
+       &lt;/x&gt;
+
+        &lt;y&gt;
+            &lt;title&gt;Y-axis Title&lt;/title&gt;
+            &lt;range&gt;
+                &lt;min&gt;0&lt;/min&gt;
+            &lt;/range&gt;
+            &lt;gridline&gt;
+                &lt;major&gt;true&lt;/major&gt;
+                &lt;minor&gt;true&lt;/minor&gt;
+            &lt;/gridline&gt;
+            &lt;reference at=&quot;55&quot; style=&quot;stroke:green;stroke-opacity:0.2;stroke-width:5;stroke-dasharray:none;&quot;&gt;
+                This is a horizontal reference line
+            &lt;/reference&gt;
+            &lt;reference at=&quot;36&quot; style=&quot;stroke:red;stroke-dasharray:10,5,2,5;&quot;&gt;
+                This is another horizontal reference line
+            &lt;/reference&gt;
+        &lt;/y&gt;
+
+        &lt;x2&gt;
+            &lt;title&gt;X2-axis Title&lt;/title&gt;
+        &lt;/x2&gt;
+
+        &lt;y2&gt;
+            &lt;title&gt;Y2-axis Title&lt;/title&gt;
+            &lt;range&gt;
+                &lt;min&gt;0&lt;/min&gt;
+                &lt;max&gt;70&lt;/max&gt;
+            &lt;/range&gt;
+            &lt;interval&gt;
+                &lt;major&gt;10&lt;/major&gt;
+                &lt;minor&gt;5&lt;/minor&gt;
+            &lt;/interval&gt;
+        &lt;/y2&gt;
+    &lt;/axis&gt;
+
+    &lt;<A HREF="syntax_layout.html">layout</A>&gt;
+        &lt;width&gt;800&lt;/width&gt;
+        &lt;height&gt;600&lt;/height&gt;
+        &lt;margin&gt;10&lt;/margin&gt;
+        &lt;title&gt;
+            &lt;height&gt;40&lt;/height&gt;
+        &lt;/title&gt;
+        &lt;north&gt;
+            &lt;title&gt;
+                &lt;height&gt;20&lt;/height&gt;
+            &lt;/title&gt;
+            &lt;label&gt;
+                &lt;height&gt;10&lt;/height&gt;
+            &lt;/label&gt;
+        &lt;/north&gt;
+        &lt;south&gt;
+            &lt;label&gt;
+                &lt;height&gt;10&lt;/height&gt;
+            &lt;/label&gt;
+            &lt;title&gt;
+                &lt;height&gt;20&lt;/height&gt;
+            &lt;/title&gt;
+            &lt;legend&gt;
+                &lt;height&gt;60&lt;/height&gt;
+                &lt;columns&gt;4&lt;/columns&gt;
+            &lt;/legend&gt;
+        &lt;/south&gt;
+        &lt;east&gt;
+            &lt;label&gt;
+                &lt;width&gt;50&lt;/width&gt;
+            &lt;/label&gt;
+            &lt;title&gt;
+                &lt;width&gt;20&lt;/width&gt;
+            &lt;/title&gt;
+            &lt;legend&gt;
+                &lt;columns&gt;1&lt;/columns&gt;
+            &lt;/legend&gt;
+        &lt;/east&gt;
+        &lt;west&gt;
+            &lt;title&gt;
+                &lt;height&gt;20&lt;/height&gt;
+            &lt;/title&gt;
+            &lt;label&gt;
+                &lt;width&gt;50&lt;/width&gt;
+                &lt;height&gt;10&lt;/height&gt;
+            &lt;/label&gt;
+        &lt;/west&gt;
+    &lt;/layout&gt;
+
+    &lt;<A HREF="syntax_style.html">style</A>&gt;
+        &lt;title&gt;
+            filter:none;
+            fill:lime;
+            stroke:blue;
+            &lt;x2&gt;
+                fill:red;
+            &lt;/x2&gt;
+            &lt;y2&gt;
+                fill:red;
+            &lt;/y2&gt;
+        &lt;/title&gt;
+        &lt;grid&gt;
+            &lt;vertical&gt;
+                &lt;major&gt;stroke:white;&lt;/major&gt;
+                &lt;minor&gt;stroke:pink;&lt;/minor&gt;
+            &lt;/vertical&gt;
+            &lt;horizontal&gt;
+                &lt;major&gt;stroke:white;&lt;/major&gt;
+                &lt;minor&gt;stroke:pink;&lt;/minor&gt;
+            &lt;/horizontal&gt;
+        &lt;/grid&gt;
+        &lt;reference&gt;
+            &lt;vertical&gt;
+                &lt;major&gt;stroke:red&lt;/major&gt;
+            &lt;/vertical&gt;
+            &lt;horizontal&gt;
+                &lt;major&gt;stroke:yellow&lt;/major&gt;
+            &lt;/horizontal&gt;
+        &lt;/reference&gt;
+        &lt;label&gt;
+            &lt;x2&gt;
+                fill:red
+            &lt;/x2&gt;
+            &lt;y2&gt;
+                fill:red
+            &lt;/y2&gt;
+        &lt;/label&gt;
+        &lt;plotarea&gt;
+&lt;!--            &lt;color opacity=&quot;0.2&quot;&gt;seagreen&lt;/color&gt;--&gt;
+            &lt;gradient&gt;
+                &lt;color offset=&quot;0.00&quot; opacity=&quot;0.80&quot;&gt;blue&lt;/color&gt;
+                &lt;color offset=&quot;0.50&quot; opacity=&quot;0.50&quot;&gt;skyblue&lt;/color&gt;
+                &lt;color offset=&quot;0.70&quot; opacity=&quot;0.50&quot;&gt;lightblue&lt;/color&gt;
+                &lt;color offset=&quot;0.75&quot; opacity=&quot;0.50&quot;&gt;orange&lt;/color&gt;
+                &lt;color offset=&quot;0.80&quot; opacity=&quot;0.75&quot;&gt;yellow&lt;/color&gt;
+                &lt;color offset=&quot;1.00&quot;&gt;green&lt;/color&gt;
+            &lt;/gradient&gt;
+&lt;!--            &lt;picture&gt;background.jpg&lt;/picture&gt;--&gt;
+            &lt;picture location=&quot;topright&quot; &gt;penguin.png&lt;/picture&gt;
+            &lt;picture location=&quot;bottom&quot; &gt;penguin.png&lt;/picture&gt;
+            &lt;border/&gt;
+        &lt;/plotarea&gt;
+        &lt;annotation&gt;
+            &lt;marker&gt;
+                fill:blue;
+                stroke-width:2;
+                stroke:mediumturquoise;
+                stroke-opacity:0.75;
+            &lt;/marker&gt;
+            &lt;text&gt;
+                fill:yellow;
+                fill-opacity:1;
+                font-size:24px;
+                font-weight:bold;
+                font-family:Technical;
+            &lt;/text&gt;
+        &lt;/annotation&gt;
+        &lt;series&gt;
+            &lt;hue&gt;
+                &lt;initial&gt;270&lt;/initial&gt;
+                &lt;step&gt;10&lt;/step&gt;
+            &lt;/hue&gt;
+            &lt;saturation&gt;
+                &lt;min&gt;0.4&lt;/min&gt;
+                &lt;max&gt;1.0&lt;/max&gt;
+                &lt;levels&gt;4&lt;/levels&gt;
+            &lt;/saturation&gt;
+            &lt;brightness&gt;
+                &lt;min&gt;0.5&lt;/min&gt;
+                &lt;max&gt;1&lt;/max&gt;
+                &lt;levels&gt;2&lt;/levels&gt;
+            &lt;/brightness&gt;
+        &lt;/series&gt;
+    &lt;/style&gt;
+
+&lt;/chart&gt;</code></pre>
+<H2>Complete Syntax as defined by XML Schema</H2>
+<P>The syntax of the simple XML input file is fully described by the
+<A HREF="../src/lineChart.xsd">lineChart.xsd</A> XML Schema
+Definition file. 
+</P>
+<P>The schema is not essential for actually creating a chart, but it
+is useful if you want to edit the simple XML file with a schema-aware XML editor and be prompted to input tags in the
+appropriate places. If you have a schema-aware XML editor such as <A HREF="http://www.xmlspy.com/download_spy_home.html">XMLSPY
+2005
+Home Edition</A> (download for free) or <A HREF="http://www.jetbrains.com/idea/">IntelliJ
+IDEA</A> (not free, but very Very VERY good), then you should ensure
+that the XML input file begins with the following: 
+</P>
+<code>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;chart xmlns=&quot;http://fleabag.org/lineChart&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://fleabag.org/lineChart file:lineChart.xsd&quot;&gt;
+       .
+       .
+&lt;/chart&gt;
+</pre>
+</code>
+<P>This will enable your schema-aware editor to prompt you to input tags
+and attributes in the correct places. Note that before trying to
+<A HREF="02transform_to_svg.html">transform your file into SVG</A> you must
+remove the default namespace (xmlns) attribute, otherwise you will
+end up with an (effectively) empty output file. Optionally, you can
+also remove the <I>xmlns:xsi</I> and <I>xsi:schemalocation</I>
+attributes as these are only used when you use a schema-aware editor,
+or when you use a validating XML parser - neither of which are essential to the
+cause. 
+</P>
+<P>In short, before you transform the XML input file into SVG, it
+should look like just: 
+</P>
+<code>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;chart&gt;
+       .
+       .
+&lt;/chart&gt;
+</pre>
+</code>
+<pre>&nbsp;</pre>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<font size="1"><i><hr><br>
+Copyright © 2004-2005 <a href="mailto:andrew_armstrong(at)unwired.com.au">Andrew J. Armstrong</a> 
+</i></font>
+
+</td></tr><!--msnavigation--></table></BODY>
+</HTML>

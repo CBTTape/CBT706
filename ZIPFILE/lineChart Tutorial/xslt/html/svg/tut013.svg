@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" height="600" width="800" viewBox="0 0 800 600">
+<style type="text/css">
+<![CDATA[
+        .grid           {fill:none;stroke-width:2;stroke:#fafafa;;}
+        .gridVert       {;}
+        .gridVertMajor  {;}
+        .gridVertMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .gridHorz       {;}
+        .gridHorzMajor  {;}
+        .gridHorzMinor  {stroke-width:1;stroke-dasharray:1;;}
+        .ref            {stroke:blue;stroke-width:1;stroke-dasharray:1,2;;}
+        .refVert        {;}
+        .refHorz        {;}
+        .label          {stroke:none;fill:black;font-size:10px;;}
+        .labelX         {font-size:10px;;text-anchor:middle;}
+        .labelY         {font-size:10px;;text-anchor:end;}
+        .labelX2        {font-size:10px;;text-anchor:middle;}
+        .labelY2        {font-size:10px;;text-anchor:start;}
+        .title          {fill:gold;stroke:goldenrod;font-size:40px;;text-anchor:middle;}
+        .titleX         {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleX2        {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleY         {fill:black;font-size:20px;;text-anchor:middle;}
+        .titleY2        {fill:black;font-size:20px;;text-anchor:middle;}
+        .plotarea       {fill:white;}
+        .plotareaBorder {fill:none;stroke:gray;stroke-width:3;;}
+        .legend         {stroke:none;fill:black;font-size:10px;;}
+        .annotation     {fill:gold;stroke:black;fill-opacity:0.2;stroke-opacity:0.2;font-size:10px;;}
+        .annotationText {fill:black;fill-opacity:0.7;stroke:none;;text-anchor:middle;}
+        .series         {fill:none;stroke-width:5;stroke-opacity:0.5;stroke-linejoin:round;stroke-linecap:round;;}
+        .series1        {stroke:rgb(16.67%,0%,100%);}
+        .series2        {stroke:rgb(81.18%,8.5%,85%);}
+    ]]>
+</style>
+<defs>
+<filter width="100" height="100" id="shadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+<filter width="100" height="100" id="invertedShadowFilter">
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+<feOffset in="blur" dx="4" dy="-4" result="offsetBlur"/>
+<feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#bbbbbb" result="specular">
+<fePointLight x="-5000" y="-10000" z="20000"/>
+</feSpecularLighting>
+<feComposite in="specular" in2="SourceAlpha" operator="in" result="specular"/>
+<feComposite in="SourceGraphic" in2="specular" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="shiney"/>
+<feMerge>
+<feMergeNode in="offsetBlur"/>
+<feMergeNode in="shiney"/>
+</feMerge>
+</filter>
+</defs>
+<g transform="matrix(1 0 0 -1 80 545)">
+<g class="label">
+<!--South Legend-->
+<g transform="matrix(1 0 0 -1 0 -30)" class="series">
+<line class="series1" x1="0" y1="10" x2="31.75" y2="10"/>
+<clipPath id="clip1.0,-30">
+<rect x="0" y="0" width="153.75" height="20"/>
+</clipPath>
+<text y="11.666666666666668" x="36.75" class="legend" clip-path="url(#clip1.0,-30)">Aquarius</text>
+<line class="series2" x1="158.75" y1="10" x2="190.5" y2="10"/>
+<clipPath id="clip2.0,-30">
+<rect x="158.75" y="0" width="153.75" height="20"/>
+</clipPath>
+<text y="11.666666666666668" x="195.5" class="legend" clip-path="url(#clip2.0,-30)">Scorpio</text>
+</g>
+<g transform="matrix(1 0 0 -1 0 -10)" class="labelX">
+<!--X-axis Labels-->
+<text x="0" y="0">0</text>
+<text x="158.75" y="0">1</text>
+<text x="317.5" y="0">2</text>
+<text x="476.25" y="0">3</text>
+<text x="635" y="0">4</text>
+</g>
+<g transform="matrix(1 0 0 -1 -5 0)" class="labelY">
+<!--Y-axis Labels-->
+<text x="-5" y="-0">0</text>
+<text x="-5" y="-153.33">5</text>
+<text x="-5" y="-306.67">10</text>
+<text x="-5" y="-460">15</text>
+</g>
+<g transform="matrix(1 0 0 -1 640 0)" class="labelY2">
+<!--Y2-axis Labels-->
+<text x="5" y="-0">0</text>
+<text x="5" y="-30.67">10</text>
+<text x="5" y="-61.33">20</text>
+<text x="5" y="-92">30</text>
+<text x="5" y="-122.67">40</text>
+<text x="5" y="-153.33">50</text>
+<text x="5" y="-184">60</text>
+<text x="5" y="-214.67">70</text>
+<text x="5" y="-245.33">80</text>
+<text x="5" y="-276">90</text>
+<text x="5" y="-306.67">100</text>
+<text x="5" y="-337.33">110</text>
+<text x="5" y="-368">120</text>
+<text x="5" y="-398.67">130</text>
+<text x="5" y="-429.33">140</text>
+<text x="5" y="-460">150</text>
+</g>
+</g>
+<g filter="url(#shadowFilter)" transform="matrix(1 0 0 -1 -80 495)" class="title">
+<!--Chart Title-->
+<text x="400" y="0">Weather Balloon Tracking</text>
+</g>
+<g transform="matrix(1 0 0 -1 0 -30)" class="titleX">
+<!--X-axis Title-->
+<text x="317.5" y="0">Time Since Launch (days)</text>
+</g>
+<g transform="matrix(1 0 0 -1 -50 0), rotate(-90 0 -230)" class="titleY">
+<!--Y-axis Title-->
+<text x="0" y="-230">Aquarius Height Above Sea Level (km)</text>
+</g>
+<g transform="matrix(1 0 0 -1 685 0), rotate(-90 0 -230)" class="titleY2">
+<!--Y2-axis Title-->
+<text x="0" y="-230">Scorpio Height Above Sea Level (km)</text>
+</g>
+<clipPath id="clipPlotarea">
+<rect x="0" y="0" width="635" height="460"/>
+</clipPath>
+<g clip-path="url(#clipPlotarea)">
+<g transform="matrix(1 0 0 -1 0 460)" class="plotarea">
+<!--Plot area background-->
+<rect x="0" y="0" width="635" height="460"/>
+<image xlink:href="background.jpg" filter="url(#pictureFilter1)" preserveAspectRatio="none" x="0" y="0" width="158.75" height="153.33333333333334">
+<filter id="pictureFilter1" height="300%" width="400%" y="0" x="0" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox">
+<feOffset height="100%" width="100%" y="0" x="0"/>
+<feTile/>
+<feComponentTransfer>
+<feFuncA intercept="0" slope="0.5" type="linear"/>
+</feComponentTransfer>
+</filter>
+</image>
+</g>
+<g class="grid">
+<!--Grid Lines-->
+<g class="gridVert">
+<g class="gridVertMajor">
+<!--Major Vertical Grid Lines-->
+<line x1="0" y1="0" x2="0" y2="460"/>
+<line x1="158.75" y1="0" x2="158.75" y2="460"/>
+<line x1="317.5" y1="0" x2="317.5" y2="460"/>
+<line x1="476.25" y1="0" x2="476.25" y2="460"/>
+<line x1="635" y1="0" x2="635" y2="460"/>
+</g>
+</g>
+<g class="gridHorz">
+<g class="gridHorzMajor">
+<!--Major Horizontal Grid Lines-->
+<line x1="0" y1="0" x2="635" y2="0"/>
+<line x1="0" y1="153.33" x2="635" y2="153.33"/>
+<line x1="0" y1="306.67" x2="635" y2="306.67"/>
+<line x1="0" y1="460" x2="635" y2="460"/>
+</g>
+</g>
+</g>
+<g filter="url(#invertedShadowFilter)" class="series">
+<!--Data series-->
+<g class="series1">
+<title>Aquarius</title>
+<path d="M 0 30.67 L 158.75 92 L 317.5 276 L 476.25 245.33 L 635 214.67 "/>
+</g>
+<g class="series2">
+<title>Scorpio</title>
+<path d="M 0 33.73 L 158.75 358.8 L 317.5 266.8 L 476.25 193.2 L 635 6.13 "/>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 0 460)" class="plotareaBorder">
+<!--Plot area border-->
+<rect x="0" y="0" width="635" height="460"/>
+</g>
+</g>
+<g transform="matrix(1 0 0 -1 0 0)" class="annotation">
+<!--Annotations-->
+</g>
+</g>
+</svg>
